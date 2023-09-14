@@ -1,0 +1,51 @@
+<h1>Projeto</h1>
+<head>
+    <title>Projeto de lista</title>
+    <link rel="icon" href="c:\Users\Henriques\Desktop\logo mine.png">
+</head>
+<ul class="tree">
+    <li>
+        <span exercicio-folder>backend</span>
+        <ul>
+            <li>
+                <span exercicio-folder>app</span>
+                <ul>
+                    <li>produto.js</li>
+                    <li>usuario.js</li>
+                    <li>venda.js</li>
+                </ul>
+            </li>
+            <li>
+                <span exercicio-folder >config</span>
+                <ul>
+                    <li>banco.js</li>
+                    <li>rotas.js</li>
+                    <li>servidor.js</li>
+                </ul>
+            </li>
+        </ul>
+    </li>
+    <li>
+        <span exercicio-folder >frontend</span>
+        <ul>
+            <li>
+                <span exercicio-folder >public</span>
+                <ul>
+                    <li>app.css</li>
+                    <li>app.js</li>
+                    <li>index.html</li>
+                </ul>
+            </li>
+        </ul>
+    </li>
+</ul>
+<link rel="stylesheet" href="http://files.cod3r.com.br/curso-web/tree.css">
+<script>
+    document.querySelectorAll('[exercicio-folder]').forEach(folder => {
+        folder.onclick=function(e){
+            const ul= folder.nextElementSibling
+            const d= ul.style.display
+            ul.style.display= d== 'none' ? 'block' : 'none'
+        }
+    })
+</script>
